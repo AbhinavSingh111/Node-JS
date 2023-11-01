@@ -2,6 +2,7 @@
 
 // i want user to input 'add/remove' , 'filename' , 'filetext' in cmd and it gets executed
 
+const { log } = require('console');
 const fs = require('fs');
 
 const input = process.argv;
@@ -11,4 +12,7 @@ if (input[2]=='add'){
 }
 else if(input[2]=='remove'){
     fs.unlinkSync(input[3]);
+}
+else{
+    console.log("invalid input");
 }
